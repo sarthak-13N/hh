@@ -1,0 +1,761 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.header {
+  background: #333;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+
+.header-top p {
+  color: #fff;
+}
+
+.buy-products-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  animation: blink 1.5s infinite;
+  /* Apply the blinking animation */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 2;
+    /* Fully visible */
+  }
+
+  50% {
+    opacity: 0;
+    /* Invisible */
+  }
+
+  100% {
+    opacity: 2;
+    /* Back to fully visible */
+  }
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: white;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+}
+
+.nav-links li {
+  padding: 5px 10px;
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.nav-links a:hover {
+  color: #626262;
+}
+
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn div {
+  width: 25px;
+  height: 3px;
+  background: black;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #f4f4f4;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .toggle-btn {
+    display: flex;
+  }
+
+  .toggle-btn:hover {
+    cursor: pointer;
+
+  }
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url('photos/LV\ \(3\).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 145px 20px;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.form-container {
+  background: #c8c8c871;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container h3 {
+  margin-bottom: 15px;
+  font-size: large;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+footer p {
+  color: #df9f40;
+}
+
+.call-me,
+.mail-me {
+  color: #ffffff;
+  /* Blue color */
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+
+/* Default styles */
+.photo-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  /* background-color: #df9f40; */
+  border-radius: 10px;
+}
+
+.photo {
+  flex: 1;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+  padding: 25px;
+}
+
+.info h3 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.info p {
+  font-size: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .photo-info-container {
+    flex-direction: column;
+    /* Stack the photo and info vertically */
+    align-items: center;
+    text-align: left;
+  }
+
+  .info p {
+    font-size: 12px;
+  }
+
+  .info h3 {
+    font-size: 25px;
+  }
+
+  .photo {
+    margin-bottom: 15px;
+    /* Add space between photo and info */
+    width: 80%;
+    /* Limit photo width on small screens */
+  }
+
+  .info {
+    width: 95%;
+    /* Limit info width on small screens */
+  }
+}
+
+/* Default styles for button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Styling for the button */
+.know-more-btn {
+  background-color: #333;
+  /* Dark gray background */
+  color: white;
+  /* White text color */
+  padding: 12px 25px;
+  border: 2px solid #fff;
+  /* White border */
+  border-radius: 30px;
+  /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow effect */
+}
+
+/* Hover effect */
+.know-more-btn:hover {
+  background-color: white;
+  /* Change background color on hover */
+  color: #333;
+  /* Dark text color */
+  border: 2px solid #333;
+  /* Dark border color */
+  transform: translateY(-2px);
+  /* Slightly raise the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* Increase shadow effect */
+}
+
+/* Focus effect for accessibility */
+.know-more-btn:focus {
+  outline: none;
+  /* Remove default outline */
+  border-color: #00bcd4;
+  /* Highlight border with blue color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .know-more-btn {
+    padding: 10px 20px;
+    /* Adjust padding on smaller screens */
+    font-size: 14px;
+    /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .know-more-btn {
+    padding: 8px 18px;
+    /* Further reduce padding */
+    font-size: 12px;
+    /* Further reduce font size */
+  }
+}
+
+
+/* Styling for the button */
+.more-btn {
+  background-color: #33333377;
+  /* Dark gray background */
+  color: white;
+  /* White text color */
+  padding: 12px 25px;
+  border: 2px solid #fff;
+  /* White border */
+  border-radius: 30px;
+  /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow effect */
+}
+
+/* Hover effect */
+.more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Change background color on hover */
+  color: #333;
+  /* Dark text color */
+  border: 2px solid #333;
+  /* Dark border color */
+  transform: translateY(-2px);
+  /* Slightly raise the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* Increase shadow effect */
+}
+
+/* Focus effect for accessibility */
+.more-btn:focus {
+  outline: none;
+  /* Remove default outline */
+  border-color: #00bcd4;
+  /* Highlight border with blue color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .more-btn {
+    padding: 10px 20px;
+    /* Adjust padding on smaller screens */
+    font-size: 14px;
+    /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .more-btn {
+    padding: 8px 18px;
+    /* Further reduce padding */
+    font-size: 12px;
+    /* Further reduce font size */
+  }
+}
+
+/* Card container */
+/* Card container: flexbox for multiple cards */
+/* Card container: flexbox for multiple cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* Space between cards */
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Card styles */
+.card {
+  width: 100%;
+  max-width: 450px;
+  /* Limit card width */
+  height: 230px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay for project title */
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+/* Show the overlay on hover */
+.card:hover .overlay {
+  height: 100%;
+}
+
+
+
+/* Card content */
+.card-content {
+  background: rgba(0, 0, 0, 0);
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.card-content:hover {
+  background: rgba(0, 0, 0, 0.46);
+  padding: 15px;
+  text-align: center;
+}
+
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+    max-width: 100%;
+    /* Use the full width on smaller devices */
+    padding: 10px;
+  }
+
+  .card {
+    aspect-ratio: 4 / 3;
+    /* Slightly taller card for better mobile visibility */
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .thumbnail-slider img {
+    height: 80px;
+  }
+
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-button img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.offerings-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.offerings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.offering {
+  width: 400px;
+  padding: 50px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.offering:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: rgba(101, 101, 101, 0.808);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.popup-content h2 {
+  margin: 0 0 10px;
+  color: #f4efef;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content input, .popup-content textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.popup-content button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: #555;
+}
+
+@media screen and (max-width: 600px) {
+  .popup-content {
+      width: 95%;
+      padding: 20px;
+      margin-left: 8px;
+  }
+
+  .popup-content h2 {
+      font-size: 18px;
+  }
+
+  .popup-content button {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .popup-content input, .popup-content textarea {
+      font-size: 12px;
+      padding: 8px;
+  }
+}

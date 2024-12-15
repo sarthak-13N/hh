@@ -1,0 +1,268 @@
+/* General container styling */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  justify-content: center;
+align-items: center;
+min-height: 10vh;
+}
+
+.header {
+  background: #333;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+.buy-products-btn {
+background: red;
+color: white;
+border: none;
+padding: 8px 15px;
+cursor: pointer;
+border-radius: 5px;
+animation: blink 1.5s infinite; /* Apply the blinking animation */
+}
+
+@keyframes blink {
+0% {
+opacity: 2; /* Fully visible */
+}
+50% {
+opacity: 0; /* Invisible */
+}
+100% {
+opacity: 2; /* Back to fully visible */
+}
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: white;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  
+}
+
+.nav-links li {
+  padding: 5px 10px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.nav-links a:hover{
+  color: #626262;
+}
+
+.toggle-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn div {
+  width: 25px;
+  height: 3px;
+  background: black;
+}
+
+@media (max-width: 768px) {.nav-links {
+  display: none; /* Hidden by default */
+  position: absolute; /* Required for z-index to work */
+  top: 60px; /* Position at the top of the page */
+  right: 0; /* Align to the left of the page */
+  width: 60%; /* Make it full width */
+  background-color: white; /* Set a background to ensure visibility */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 9999; /* Move it to the top layer */
+  flex-direction: column; /* Stack links vertically if needed */
+  align-items: center; /* Center links horizontally */
+  padding: 10px 0; /* Add some vertical padding */
+}
+
+.nav-links.show {
+  display: flex; /* Show the nav-links when the "show" class is added */
+}
+
+/* Optional: Style the links inside the nav */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007BFF; /* Highlight on hover */
+}
+
+
+  .toggle-btn {
+      display: flex;
+  }
+  .toggle-btn:hover{
+      cursor: pointer;
+
+  }
+}
+
+
+.details-container {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.details-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph styling */
+.details-container p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Slider styling */
+.slider {
+  position: relative;
+  width: 94.5%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.24);
+  color: rgba(255, 255, 255, 0.584);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+html{
+  scroll-behavior: smooth;
+}
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* Videos section styling */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.videos iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .details-container h1 {
+    font-size: 2em;
+  }
+
+  .details-container p {
+    font-size: 1em;
+  }
+
+  .videos iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .details-container h1 {
+    font-size: 1.8em;
+  }
+
+  .details-container p {
+    font-size: 0.9em;
+  }
+
+  .videos iframe {
+    height: 250px;
+  }
+}

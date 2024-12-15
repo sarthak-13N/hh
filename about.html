@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about_us Studio</title>
+    <link rel="icon" type="image/png" href="photos/for logo.png">
+    <link rel="stylesheet" href="styles.css">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.header {
+    background: #333;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+.header-top p{
+  color: #fff;
+}
+.buy-products-btn {
+background: red;
+color: white;
+border: none;
+padding: 8px 15px;
+cursor: pointer;
+border-radius: 5px;
+animation: blink 1.5s infinite; /* Apply the blinking animation */
+}
+
+@keyframes blink {
+0% {
+opacity: 2; /* Fully visible */
+}
+50% {
+opacity: 0; /* Invisible */
+}
+100% {
+opacity: 2; /* Back to fully visible */
+}
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: white;
+    position: relative;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.nav-links li {
+    padding: 5px 10px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+.nav-links a:hover{
+    color: #626262;
+}
+
+.toggle-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.toggle-btn div {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: flex;
+    }
+    .toggle-btn:hover{
+        cursor: pointer;
+
+    }
+}
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-top">
+        <p><a href="tel:+919623216613" class="call-me">📞+91 9623216613</a></p>
+        <button class="buy-products-btn"onclick="window.location.href='error.html'">Book Appointment</button>
+    </div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="photos/logo.png" alt="Logo" style="height: 50px; width: 100px;">
+          </div>
+          <div class="toggle-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <button class="buy-products-btn">Book Appointment</button> -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="howitworks.html">How It Works</a></li>
+            <li><a href="review.html">Client Review</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="Budget.html">Budget Calculator</a></li>
+            <li><a href="Media.html">Media Coverage</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<footer style="background-color: #222; color: #ddd; padding: 20px 0; font-family: Arial, sans-serif;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; padding: 20px;">
+        <!-- Logo Section -->
+        <div style="flex: 1 1 100%; text-align: center; margin-bottom: 20px;">
+            <img src="photos/for logo.png" alt="Logo" style="width: 100px;" />
+            <h3 style="margin: 10px 0; color: #fff;">VM Interior Studio</h3>
+        </div>
+
+        <!-- Important Links -->
+        <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+            <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">Important Links</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;"><a href="index.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">Home</a></li>
+                <li style="margin: 10px 0;"><a href="about.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">About Us</a></li>
+                <li style="margin: 10px 0;"><a href="contact.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">Contact Us</a></li>
+                <li style="margin: 10px 0;"><a href="homedesign.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">House Design Ideas</a></li>
+                <li style="margin: 10px 0;"><a href="officedesign.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">Office Design Ideas</a></li>
+                <li style="margin: 10px 0;"><a href="blogs.html" style="text-decoration: none; color: #ddd; transition: color 0.3s;">Blogs</a></li>
+            </ul>
+        </div>
+
+        <!-- Address Section -->
+        <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+            <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">Address</h4>
+            <p>3rd floor, Right, Audumbar Apartment, Paud Rd, Paud Road, Bhusari Colony, Kothrud, Pune, Maharashtra 411 038</p>
+        </div>
+
+        <!-- Business Hours -->
+        <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+            <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">Business Hours</h4>
+            <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+            <p>Sun: Closed</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+            <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">Social Media</h4>
+            <div style="margin-top: 10px;">
+                <a href="https://www.instagram.com/vm_interior_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@VM_Interior_Studio" style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/+919623216613" style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/1EsHsPtBaX/" style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i class="fab fa-facebook"></i></a>
+            </div><br>
+            <p><a href="tel:+919623216613" class="call-me" style="color: rgb(222, 159, 0);">📞Call now +91 9623216613</a></p>
+            <p><a href="help@vminteriorstudio.com" class="call-me" style="color: rgb(231, 166, 1);">e-mail- help@vminteriorstudio.com</a></p>
+            <p><a href="vminteriorstudio.com" class="call-me" style="color: rgb(224, 162, 4);">vminteriorstudio.com</a></p>
+     
+        </div>
+    </div>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Footer Bottom -->
+    <div style="text-align: center; margin-top: 20px; border-top: 1px solid #444; padding-top: 10px; font-size: 14px;">
+        <p>© 2024 VM_Interior_Studio. All Rights Reserved.</p>
+    </div>
+
+    <style>
+        @media screen and (max-width: 768px) {
+            footer div[style*="display: flex;"] {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+            footer div[style*="flex: 1 1 200px;"] {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+            footer div[style*="flex: 1 1 100%;"] {
+                margin-bottom: 20px;
+            }
+            footer h4 {
+                font-size: 18px;
+            }
+            footer p, footer li a {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            footer h3 {
+                font-size: 20px;
+            }
+            footer h4 {
+                font-size: 16px;
+            }
+            footer p, footer li a {
+                font-size: 12px;
+            }
+            footer div[style*="flex: 1 1 200px;"] {
+                text-align: center;
+            }
+        }
+    </style>
+</footer>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vm Interior Studio</title>
+    <link rel="icon" type="image/png" href="photos/for logo.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <p><a href="tel:+919623216613" class="call-me">📞+91 9623216613</a></p>
+            <button class="buy-products-btn"onclick="window.location.href='error.html'">Book Appointment</button>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="photos/logo.png" alt="Logo" style="height: 50px; width: 100px;">
+            </div>
+            <div class="toggle-btn" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- <button class="buy-products-btn">Book Appointment</button> -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="howitworks.html">How It Works</a></li>
+                <li><a href="review.html">Client Review</a></li>
+                <li><a href="faq.html">FAQ's</a></li>
+                <li><a href="Budget.html">Budget Calculator</a></li>
+                <li><a href="Media.html">Media Coverage</a></li>
+                <li><a href="Videos.html">Videos</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Best Interior Designers in Pune</h1>
+            <p>Experience Your Home Like Never Before With Our Expert Interior Designers.</p><br><br>
+            <button class="more-btn">Talk to an Interior Designer</button>
+        </div>
+        <!-- <div class="form-container">
+        <h3>Talk to an Interior Designer</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email ID" required>
+            <input type="tel" placeholder="Mobile / WhatsApp No." required>
+            <button type="submit">GET A QUOTE</button>
+        </form>
+    </div> -->
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <h2>Talk to an Interior Designer</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <h2>HIRE JUST THE DESIGN SERVICES</h2>
+        <p>GET COMPLETE CONTROL OVER THE BUDGET</p>
+
+    </footer>
+    <br><br><br>
+
+    <div class="photo-info-container">
+        <div class="photo">
+            <img src="photos/logo.png" alt="Image Description">
+        </div>
+        <div class="info">
+            <h3>VM INTERIOR STUDIO</h3>
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="button-container">
+        <a href="about.html">
+            <button class="know-more-btn">Know more about us</button></a>
+    </div><br><br><br>
+    <hr>
+    <hr><br>
+    <br><br>
+    <center>
+        <h1>Latest Projects</h1>
+    </center>
+    <br><br>
+    <div id="card-container" class="card-container"></div>
+    <div class="button-container"><br><br><br>
+        <a href="project.html">
+            <button class="know-more-btn">View more Projects</button></a>
+    </div><br>
+    <script src="script.js"></script>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/+919623216613" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <div class="offerings-section">
+        <h2 class="section-title">OUR OFFERINGS</h2>
+        <div class="offerings">
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/team.png" alt="Team Icon">
+                </div>
+                <h3>Professional Design Team</h3>
+                <p>Get a dedicated team of our professional Interior designers assigned to your project.</p>
+            </div>
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/option.png" alt="Options Icon">
+                </div>
+                <h3>Design Options</h3>
+                <p>Get multiple interior design options until they meet your expectations & requirements.</p>
+            </div>
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/charge.png" alt="Charges Icon">
+                </div>
+                <h3>Fixed Design Charges</h3>
+                <p>We charge you fixed design fees. Don't worry about % based increasing design fees.</p>
+            </div>
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/time.png" alt="Timely Icon">
+                </div>
+                <h3>Timely Completion</h3>
+                <p>Assured timely completion of the project as per the agreed terms.</p>
+            </div>
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/meterial.png" alt="Material Icon">
+                </div>
+                <h3>Material Selection</h3>
+                <p>We accompany you to the vendor's showroom for finalizing the material selection.</p>
+            </div>
+            <div class="offering">
+                <div class="icon">
+                    <img src="photos/assistence.png" alt="Execution Icon">
+                </div>
+                <h3>Assistance In Execution</h3>
+                <p>We assist you and the contractors throughout the execution process.</p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin-bottom: 25px;">Why Choose Us</h1>
+    <div class="photo-info-container">
+        <div class="info">
+            <!-- <h3>Why Choose Us</h3> -->
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+        <div class="photo">
+            <img src="photos/pool1.jpeg" alt="Image Description">
+        </div>
+    </div>
+    <hr><hr>
+    <div class="photo-info-container">
+        <div class="info">
+            <!-- <h3>Why Choose Us</h3> -->
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+        <div class="photo">
+            <img src="photos/road3.jpeg" alt="Image Description">
+        </div>
+    </div>
+    <hr><hr>
+    <div class="photo-info-container">
+        <div class="info">
+            <!-- <h3>Why Choose Us</h3> -->
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+        <div class="photo">
+            <img src="photos/lv11.jpeg" alt="Image Description">
+        </div>
+    </div>
+    <hr><hr>
+    <div class="photo-info-container">
+        <div class="info">
+            <!-- <h3>Why Choose Us</h3> -->
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+        <div class="photo">
+            <img src="photos/bed4.jpeg" alt="Image Description">
+        </div>
+    </div>
+    <hr><hr>
+    <div class="photo-info-container">
+        <div class="info">
+            <!-- <h3>Why Choose Us</h3> -->
+            <p>At VM Interior Studio, we specialize in transforming ordinary spaces into extraordinary environments that
+                inspire and delight.
+                With a keen eye for design and a passion for innovation, our team of expert interior designers brings
+                creativity, functionality,
+                and style to every project.
+                <br><br>
+                Whether you're looking to redesign your home, office, or commercial space, we offer personalized
+                interior design solutions tailored
+                to your unique needs and aesthetic preferences. From contemporary designs to timeless classics,
+                our approach is rooted in understanding your vision and delivering spaces that reflect your personality
+                and lifestyle.
+            </p>
+        </div>
+        <div class="photo">
+            <img src="photos/lv12.jpeg" alt="Image Description">
+        </div>
+    </div>
+    <hr><hr><br>
+
+    <div
+        style="font-family: Arial, sans-serif; padding: 40px; max-width: 1300px; margin: auto; border: 1px solid #ddd;">
+        <h1 style="text-align: center; margin-bottom: 40px;">How To Reach Us</h1>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+            <!-- Address and Contact Details -->
+            <div style="flex: 1; min-width: 300px; margin-right: 20px; margin-bottom: 20px;">
+                <p style="margin: 5px 0;"><strong>Address</strong><br>Office No. 11, Audumbar Apartment, Bhusari
+                    Colony,<br> Kothrud Depot, PUNE, Maharashtra 411 038</p>
+                <p style="margin: 5px 0;"><strong>Timing</strong><br>All Days | 9:30 AM - 07:00 PM</p>
+                <p style="margin: 5px 0;"><strong>Contact Number</strong><br>+91 9623216613</p><br>
+                <a href="tel:+919623216613"
+                    style="display: inline-block; text-decoration: none; background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold ">Call
+                    Now</a>
+            </div>
+            <!-- Google Map -->
+            <div style="flex: 1; min-width: 250px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241921.9434946552!2d73.41223977020036!3d18.66263324439297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf4d46d22571%3A0x508531a925d2291a!2sVM%20Interior%20Studio!5e0!3m2!1sen!2sin!4v1734011804667!5m2!1sen!2sin"
+                    width="100%" height="250" style="border: 0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+                div[style*="display: flex"] {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                div[style*="margin-right: 20px"] {
+                    margin-right: 0;
+                }
+            }
+        </style>
+    </div>
+    <br><br>
+    <footer style="background-color: #222; color: #ddd; padding: 20px 0; font-family: Arial, sans-serif;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; padding: 20px;">
+            <!-- Logo Section -->
+            <div style="flex: 1 1 100%; text-align: center; margin-bottom: 20px;">
+                <img src="photos/for logo.png" alt="Logo" style="width: 100px;" />
+                <h3 style="margin: 10px 0; color: #fff;">VM Interior Studio</h3>
+            </div>
+
+            <!-- Important Links -->
+            <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">
+                    Important Links</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;"><a href="index.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">Home</a></li>
+                    <li style="margin: 10px 0;"><a href="about.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">About Us</a></li>
+                    <li style="margin: 10px 0;"><a href="contact.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">Contact Us</a></li>
+                    <li style="margin: 10px 0;"><a href="homedesign.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">House Design Ideas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="officedesign.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">Office Design Ideas</a>
+                    </li>
+                    <li style="margin: 10px 0;"><a href="blogs.html"
+                            style="text-decoration: none; color: #ddd; transition: color 0.3s;">Blogs</a></li>
+                </ul>
+            </div>
+
+            <!-- Address Section -->
+            <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">
+                    Address</h4>
+                <p>3rd floor, Right, Audumbar Apartment, Paud Rd, Paud Road, Bhusari Colony, Kothrud, Pune, Maharashtra
+                    411 038</p>
+            </div>
+
+            <!-- Business Hours -->
+            <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">
+                    Business Hours</h4>
+                <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                <p>Sun: Closed</p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div style="flex: 1 1 200px; margin: 10px; text-align: center;">
+                <h4 style="color: #fff; margin-bottom: 10px; border-bottom: 2px solid #444; display: inline-block;">
+                    Social Media</h4>
+                <div style="margin-top: 10px;">
+                    <a href="https://www.instagram.com/vm_interior_studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@VM_Interior_Studio"
+                        style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/+919623216613"
+                        style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="#"
+                        style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/share/1EsHsPtBaX/"
+                        style="margin: 0 10px; text-decoration: none; color: #ddd; font-size: 18px; transition: color 0.3s;"><i
+                            class="fab fa-facebook"></i></a>
+                </div><br>
+                <p><a href="tel:+919623216613" class="call-me" style="color: rgb(222, 159, 0);">📞Call now +91 9623216613</a></p>
+                <p><a href="help@vminteriorstudio.com" class="call-me" style="color: rgb(231, 166, 1);">e-mail- help@vminteriorstudio.com</a></p>
+                <p><a href="vminteriorstudio.com" class="call-me" style="color: rgb(224, 162, 4);">vminteriorstudio.com</a></p>
+         
+            </div>
+        </div>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+        <!-- Footer Bottom -->
+        <div
+            style="text-align: center; margin-top: 20px; border-top: 1px solid #444; padding-top: 10px; font-size: 14px;">
+            <p>© 2024 VM_Interior_Studio. All Rights Reserved.</p>
+        </div>
+
+        <style>
+            @media screen and (max-width: 768px) {
+                footer div[style*="display: flex;"] {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                }
+
+                footer div[style*="flex: 1 1 200px;"] {
+                    flex: 1 1 100%;
+                    margin-bottom: 20px;
+                }
+
+                footer div[style*="flex: 1 1 100%;"] {
+                    margin-bottom: 20px;
+                }
+
+                footer h4 {
+                    font-size: 18px;
+                }
+
+                footer p,
+                footer li a {
+                    font-size: 14px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                footer h3 {
+                    font-size: 20px;
+                }
+
+                footer h4 {
+                    font-size: 16px;
+                }
+
+                footer p,
+                footer li a {
+                    font-size: 12px;
+                }
+
+                footer div[style*="flex: 1 1 200px;"] {
+                    text-align: center;
+                }
+            }
+        </style>
+    </footer>
+
+</body>
+
+</html>
