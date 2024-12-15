@@ -56,7 +56,9 @@ body {
   }
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   display: flex;
   justify-content: space-between;

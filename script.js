@@ -3,7 +3,7 @@ const projects = [
     {
       id: 1,
       title: "2BHK luxury apartment",
-      backgroundImage: "photos/bed4.jpeg",
+      backgroundImage: "https://github.com/sarthak-13N/vm-interior-images/blob/main/bed4.jpeg?raw=true",
       details: "An e-learning platform for modern education.",
       photos: ["https://via.placeholder.com/400x200", "https://via.placeholder.com/400x300"],
       videos: ["https://www.youtube.com/embed/dQw4w9WgXcQ"], // YouTube embed link
@@ -11,7 +11,7 @@ const projects = [
     {
       id: 2,
       title: "3BHK luxury apartment",
-      backgroundImage: "photos/road3.jpeg",
+      backgroundImage: "https://github.com/sarthak-13N/vm-interior-images/blob/main/road3.jpeg?raw=true",
       details: "An e-learning platform for modern education.",
       photos: ["https://via.placeholder.com/400x200", "https://via.placeholder.com/400x300"],
       videos: ["https://www.youtube.com/embed/dQw4w9WgXcQ"], // YouTube embed link
@@ -19,7 +19,7 @@ const projects = [
     {
       id: 3,
       title: "2.5BHK luxury apartment",
-      backgroundImage: "photos/lv12.jpeg",
+      backgroundImage: "https://github.com/sarthak-13N/vm-interior-images/blob/main/main.jpeg?raw=true",
       details: "An e-learning platform for modern education.",
       photos: ["https://via.placeholder.com/400x200", "https://via.placeholder.com/400x300"],
       videos: ["https://www.youtube.com/embed/dQw4w9WgXcQ"], // YouTube embed link
